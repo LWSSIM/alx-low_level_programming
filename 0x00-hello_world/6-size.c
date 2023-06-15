@@ -8,20 +8,12 @@
  */
 int main(void)
 {
-	const char* typeName[] = 
-	{
-		"char", "int", "long", "long long", "float"
-	};
-	const size_t typeSize[] = 
-	{
-		sizeof(char), sizeof(int), sizeof(long), sizeof(long long), sizeof(float)
-	};
-	const size_t numTypes = sizeof(typeSize) / sizeof(typeSize[0]);
+	printf("Size of a char: %lu byte(s)\n", sizeof(char));
+	printf("Size of an int: %lu byte(S)\n", sizeof(int));
+	printf("Size of a long: %lu byte(s)\n", sizeof(long));
+	printf("Size of a long long: %lu bytes(s)\n", sizeof(long long));
+	printf("Size of a float: %lu byte(s)\n", sizeof(float));
 
-	for (size_t i=0; i<numTypes; i++)
-	{
-		printf("Size of a %s: %zu bytes\n", typeName[i], typeSize[i]);
-	}
 	return (0);
 }
 
