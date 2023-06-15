@@ -4,7 +4,7 @@
 
 /**
  * main -  prints a const string + \n
- * reutrn: (0)
+ * Return: 0
  */
 int main(void)
 {
