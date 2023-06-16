@@ -4,7 +4,8 @@
 #include <stdlib.h>
 #include <time.h>
 
-/* main - gen rand n + check last digit + print
+/**
+ * main - gen rand n + check last digit + print
  *
  * Return: 0
  */
