@@ -11,11 +11,11 @@
 int main(void)
 {
 	int n;
+	int z = (n % 10);
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 
-	int z = (n % 10);
 	printf("Last digit of %d is %d ", n, z);
 		if (z > 5)
 		{
@@ -23,11 +23,11 @@ int main(void)
 		}
 		else if (z < 6 && z != 0)
 		{
-			pritnf("and is less than 6 and not 0\n");
+			printf("and is less than 6 and not 0\n");
 		}
-		else if (z = 0)
+		else if (z == 0)
 		{
-			pritnf("and is 0\n");
+			printf("and is 0\n");
 		}
 	return (0);
 }
