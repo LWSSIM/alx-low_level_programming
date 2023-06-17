@@ -9,10 +9,14 @@
  */
 int main(void)
 {
-	char i;
-	for (i = 0; i<= 10; i++)
+	int i;
+
+	or (i = 0; i<= 10; i++)
 	{
-		printf('i');
+		putchar('0'+ i);
 	}
+
+	putchar('\n');
+
 	return (0);
 }
