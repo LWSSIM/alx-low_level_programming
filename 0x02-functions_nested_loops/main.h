@@ -4,4 +4,7 @@
 /*_putchar*/
 int _putchar(char c);
 
+/*prints alphabet lowercase*/
+void print_alphabet(void);
+
 #endif
