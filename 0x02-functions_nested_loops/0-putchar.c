@@ -1,6 +1,6 @@
 /* prints a char no std header*/
 
-#include "_putchar.c"
+#include "main.h"
 
 /**
  * main - print char
