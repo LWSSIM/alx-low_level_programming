@@ -5,7 +5,7 @@
 /**
  * _islower - check if a char is lower
  *
- * @c: char to be checked 
+ * @c: char to be checked
  *
  * Return: 1 == lower || 0 != lower
  */
