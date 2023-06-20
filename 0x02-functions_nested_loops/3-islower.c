@@ -3,7 +3,9 @@
 #include "main.h"
 
 /**
- * _islower() - check if a char is lower
+ * _islower - check if a char is lower
+ *
+ * @c: char to be checked 
  *
  * Return: 1 == lower || 0 != lower
  */
