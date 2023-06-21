@@ -3,12 +3,11 @@
 #include "main.h"
 
 /**
- * times_table - print 9 times table
- */
+* times_table - print 9 times table
+*/
 void times_table(void)
 {
 	int i, j;
-	int count = 0;
 
 	for (i = 0; i <= 9; i++)
 	{
@@ -18,48 +17,35 @@ void times_table(void)
 
 			if (j != 0)
 			{
-				count += 2;
+				if (ij < 10)
+				{
+					_putchar(' ');
+					_putchar(' ');
+				}
+				else
+				{
+					_putchar(' ');
+				}
 			}
 
 			if (ij < 10)
 			{
-				count++;
+				_putchar(ij + '0');
 			}
 			else
 			{
-				count +=2;
+				_putchar((ij / 10) + '0');
+				_putchar((ij % 10) + '0');
 			}
-			if (count <= 380)
-			{
-				if (j != 0)
-				{
-					_putchar(',');
-					_putchar(' ');
-				}
 
-				if (ij < 10)
-				{
-					_putchar(' ');
-					_putchar(ij + '0');
-				}
-				else
-				{
-					_putchar((ij / 10) + '0');
-					_putchar((ij % 10) + '0');
-				}
-			}
-			else
+			if (j != 9)
 			{
-				break;
+				_putchar(',');
+				_putchar(' ');
 			}
 		}
-		if (count <= 380)
-		{
-			_putchar('\n');
-		}
-		else
-		{
-			break;
-		}
+
+		_putchar('\n');
 	}
 }
+
