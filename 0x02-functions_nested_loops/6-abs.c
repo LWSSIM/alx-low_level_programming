@@ -5,9 +5,9 @@
 /**
  * _abs - return absolute value on an int
  *
- * @int: number to be converted to absolute
+ * @n: number to be converted to absolute
  *
- * Return: |int|
+ * Return: |n|
  */
 int _abs(int n)
 {
