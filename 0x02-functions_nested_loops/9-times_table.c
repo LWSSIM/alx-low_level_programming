@@ -4,7 +4,6 @@
 
 /**
  * times_table - print 9 times table
- *
  */
 void times_table(void)
 {
@@ -35,11 +34,11 @@ void times_table(void)
 
 			if (j == 9)
 			{
-				continue;
 				_putchar(',');
 				_putchar(' ');
 			}
 		}
+
 		if (i != 9)
 		{
 			_putchar('\n');
