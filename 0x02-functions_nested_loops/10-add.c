@@ -3,7 +3,10 @@
 #include "main.h"
 
 /**
- * add - i + j 
+ * add - i + j
+ *
+ * @i: 1st opperand
+ * @j: 2nd opperand
  *
  * Return: result of addition
  */
