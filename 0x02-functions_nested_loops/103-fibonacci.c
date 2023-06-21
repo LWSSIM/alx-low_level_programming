@@ -12,14 +12,14 @@ int main(void)
 	long j = 2;
 	long k;
 	long sum = 0;
-	
+
 	while (i <= limit)
 	{
 		if (i % 2 == 0)
 		{
 			sum += i;
 		}
-		k = i + j;	
+		k = i + j;
 		i = j;
 		j = k;
 	}
