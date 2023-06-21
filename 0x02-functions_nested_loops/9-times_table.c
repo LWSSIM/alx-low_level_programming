@@ -8,6 +8,7 @@
 void times_table(void)
 {
 	int i, j;
+	int count = 0;
 
 	for (i = 0; i <= 9; i++)
 	{
@@ -17,27 +18,48 @@ void times_table(void)
 
 			if (j != 0)
 			{
-				_putchar(',');
-				_putchar(' ');
+				count += 2;
 			}
 
 			if (ij < 10)
 			{
-				_putchar(' ');
-				_putchar(ij + '0');
+				count++;
 			}
 			else
 			{
-				_putchar((ij / 10) + '0');
-				_putchar((ij % 10) + '0');
+				count +=2;
 			}
+			if (count <= 380)
+			{
+				if (j != 0)
+				{
+					_putchar(',');
+					_putchar(' ');
+				}
 
-			if (j == 9 && i == 9)
+				if (ij < 10)
+				{
+					_putchar(' ');
+					_putchar(ij + '0');
+				}
+				else
+				{
+					_putchar((ij / 10) + '0');
+					_putchar((ij % 10) + '0');
+				}
+			}
+			else
 			{
 				break;
 			}
 		}
-
-		_putchar('\n');
+		if (count <= 380)
+		{
+			_putchar('\n');
+		}
+		else
+		{
+			break;
+		}
 	}
 }
