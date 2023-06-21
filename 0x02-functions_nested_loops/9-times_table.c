@@ -32,7 +32,7 @@ void times_table(void)
 				_putchar((ij % 10) + '0');
 			}
 
-			if (j == 9)
+			if (j == 9 && i == 9)
 			{
 				break;
 			}
