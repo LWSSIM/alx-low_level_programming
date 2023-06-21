@@ -22,4 +22,7 @@ int print_sign(int n);
 /*compute the absolute value of n*/
 int _abs(int);
 
+/*print the last digit*/
+int print_last_digit(int);
+
 #endif
