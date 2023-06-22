@@ -7,18 +7,18 @@
  */
 int main(void)
 {
-	long x = 1;
-	long y = 2;
-	long k;
+	unsigned long x = 1;
+	unsigned long y = 2;
+	unsigned long k;
 	int i;
 
-	printf("%ld, %ld ", x, y);
+	printf("%lu, %lu, ", x, y);
 
 	for (i = 3; i <= 98; i++)
 	{
 		k = x + y;
 
-		printf("%ld", k);
+		printf("%lu", k);
 
 		if (i < 98)
 		{
