@@ -4,6 +4,9 @@
 /*_putchar*/
 int _putchar(char c);
 
+/*checks if digit*/
+int _isdigit(int c);
+
 /* check is upper*/
 int _isupper(int c);
 
