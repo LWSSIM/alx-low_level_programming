@@ -28,4 +28,7 @@ void print_line(int n);
 /*prints a square*/
 void print_square(int size);
 
+/*print triangle*/
+void print_triangle(int size);
+
 #endif
