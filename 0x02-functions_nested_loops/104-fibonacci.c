@@ -1,34 +1,41 @@
-/* find and print the 1st 98 fibonaci num */
 #include <stdio.h>
 /**
- * main - print 98 Fibonacci nums
+ * main - find and print the 98 fibonacci
  *
  * Return: 0
  */
 int main(void)
 {
-	unsigned long x = 1;
-	unsigned long y = 2;
-	unsigned long k;
-	int i;
+	unsigned long int i, j, k, a, b, c, d;
 
-	printf("%lu, %lu, ", x, y);
+	j = 1;
+	k = 2;
 
-	for (i = 3; i <= 98; i++)
+	printf("%lu", j);
+
+	for (i = 1; i < 91; i++)
 	{
-		k = x + y;
+		printf(", %lu", k);
+		k = k + j;
+		j = k - j;
+	}
+	a = j / 1000000000;
+	b = j % 1000000000;
+	c = k / 1000000000;
+	d = k % 1000000000;
 
-		printf("%lu", k);
-
-		if (i < 98)
-		{
-			printf(", ");
-		}
-
-		x = y;
-		y = k;
+	for (i = 92; i <= 98; ++i)
+	{
+		printf(", %lu", c + (d / 1000000000));
+		printf("%lu", c % 1000000000);
+		c = c + a;
+		a = c - a;
+		d = d + b;
+		b = d - b;
 	}
 	printf("\n");
 
 	return (0);
 }
+
+
