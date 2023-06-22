@@ -22,4 +22,7 @@ void more_numbers(void);
 /* check is upper*/
 int _isupper(int c);
 
+/*print line _*/
+void print_line(int n);
+
 #endif
