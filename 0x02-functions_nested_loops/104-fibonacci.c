@@ -6,36 +6,40 @@
  */
 int main(void)
 {
-	unsigned long int i, j, k, a, b, c, d;
+	int i;
+	unsigned long int j = 0, k = 1, sum, a, b, c, d, x, y;
 
-	j = 1;
-	k = 2;
-
-	printf("%lu", j);
-
-	for (i = 1; i < 91; i++)
+	for (i = 0; i < 92; i++)
 	{
-		printf(", %lu", k);
-		k = k + j;
-		j = k - j;
+		sum = j + k;
+		printf("%lu, ", sum);
+		j = k;
+		k = sum;
 	}
 	a = j / 1000000000;
 	b = j % 1000000000;
 	c = k / 1000000000;
 	d = k % 1000000000;
 
-	for (i = 92; i <= 98; ++i)
+	for (i = 93; i < 99; i++)
 	{
-		printf(", %lu", c + (d / 1000000000));
-		printf("%lu", c % 1000000000);
-		c = c + a;
-		a = c - a;
-		d = d + b;
-		b = d - b;
+		x = a + b;
+		y = c + d;
+		if (b + d > 9999999999)
+		{
+			x += 1;
+			y %= 10000000000;
+		}
+	printf("%lu%lu", x, y);
+	if ( i != 98)
+	{
+		printf(", ");
+	}
+	a = c;
+	b = d;
+	c = x;
+	d = y;
 	}
 	printf("\n");
-
 	return (0);
 }
-
-
