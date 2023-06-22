@@ -13,6 +13,9 @@ int mul(int a, int b);
 /* print 0-9*/
 void print_numbers(void);
 
+/*print 0-9 exception*/
+void print_most_numbers(void);
+
 /* check is upper*/
 int _isupper(int c);
 
