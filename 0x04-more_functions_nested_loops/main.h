@@ -34,4 +34,7 @@ void print_triangle(int size);
 /*print a diagonale line*/
 void print_diagonal(int n);
 
+/*find and print largest factor*/
+unsigned long largestPrimeFactor(unsigned long n);
+
 #endif
