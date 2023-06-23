@@ -37,4 +37,7 @@ void print_diagonal(int n);
 /*find and print largest factor*/
 unsigned long largestPrimeFactor(unsigned long n);
 
+/*print input int*/
+void print_number(int n);
+
 #endif
