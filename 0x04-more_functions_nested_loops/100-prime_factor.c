@@ -5,8 +5,8 @@
 /**
  * largestPrimeFactor - find and print largest prime
  * @n: input number
- * main - print result for a certain value
- * Return: 0
+ *
+ * Return: result
  */
 unsigned long largestPrimeFactor(unsigned long n)
 {
@@ -25,7 +25,10 @@ unsigned long largestPrimeFactor(unsigned long n)
 	}
 	return (n);
 }
-
+/**
+ * main - print result for a certain value
+ * Return: 0
+ */
 int main(void)
 {
 	unsigned long x = 612852475143;
