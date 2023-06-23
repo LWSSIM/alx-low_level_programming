@@ -4,34 +4,31 @@
  * print_number - prints input num
  * @num: input
  */
-void print_number(int num)
+void print_number(int n)
 {
-	unsigned int temp = num;
-	unsigned int divisor = 1;
-	unsigned int digitCount = 1;
+	unsigned int x, div, dig;
 
-	if (num < 0)
+	if (n < 0)
 	{
 		_putchar('-');
-		num = -num;
+		x = n * -1;
+	}
+	else
+	{
+		m = n
 	}
 
-	while (temp /= 10)
+	div = m;
+	dig = 1;
+
+	while (div > 9)
 	{
-	digitCount++;
+		div /= 10;
+		dig *= 10;
 	}
 
-	while (--digitCount)
+	for (; dig >= 1; dig /=10)
 	{
-	divisor *= 10;
-	}
-
-	while (divisor != 0)
-	{
-		unsigned int digit = num / divisor;
-
-		_putchar('0' + digit);
-		num %= divisor;
-	divisor /= 10;
+		_putchar(((x / dig) % 10) + '0');
 	}
 }
