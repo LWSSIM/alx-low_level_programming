@@ -2,7 +2,7 @@
 
 /**
  * print_number - prints input num
- * @num: input
+ * @n: input
  */
 void print_number(int n)
 {
@@ -15,7 +15,7 @@ void print_number(int n)
 	}
 	else
 	{
-		m = n
+		m = n;
 	}
 
 	div = m;
