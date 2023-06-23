@@ -2,6 +2,7 @@
 
 /**
  * print_number - return input number
+ * @n: number to be printed
  */
 void print_number(int n)
 {
@@ -25,8 +26,9 @@ void print_number(int n)
 	while (div != 0)
 	{
 		int dig = n / div;
+
 		_putchar('0' + dig);
 		n %= div;
-		div /=10;
+		div /= 10;
 	}
 }
