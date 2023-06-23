@@ -1,34 +1,37 @@
 #include "main.h"
 
 /**
- * print_number - return input number
- * @n: number to be printed
+ * print_number - prints input num
+ * @num: input
  */
-void print_number(int n)
+void print_number(int num)
 {
-	int div = 1;
+	int temp = num;
+	int divisor = 1;
+	int digitCount = 1;
 
-	if (n < 0)
+	if (num < 0)
 	{
 		_putchar('-');
-		n = -n;
+		num = -num;
 	}
 
-	if (n == 0)
+	while (temp /= 10)
 	{
-		_putchar('0');
-		return;
+	digitCount++;
 	}
-	while (n / div > 9)
-	{
-		div *= 10;
-	}
-	while (div != 0)
-	{
-		int dig = n / div;
 
-		_putchar('0' + dig);
-		n %= div;
-		div /= 10;
+	while (--digitCount)
+	{
+	divisor *= 10;
+	}
+
+	while (divisor != 0)
+	{
+		int digit = num / divisor;
+
+		_putchar('0' + digit);
+		num %= divisor;
+	divisor /= 10;
 	}
 }
