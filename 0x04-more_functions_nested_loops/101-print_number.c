@@ -6,9 +6,9 @@
  */
 void print_number(int num)
 {
-	int temp = num;
-	int divisor = 1;
-	int digitCount = 1;
+	unsigned int temp = num;
+	unsigned int divisor = 1;
+	unsigned int digitCount = 1;
 
 	if (num < 0)
 	{
@@ -28,7 +28,7 @@ void print_number(int num)
 
 	while (divisor != 0)
 	{
-		int digit = num / divisor;
+		unsigned int digit = num / divisor;
 
 		_putchar('0' + digit);
 		num %= divisor;
