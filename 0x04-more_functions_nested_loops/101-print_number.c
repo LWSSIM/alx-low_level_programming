@@ -15,10 +15,10 @@ void print_number(int n)
 	}
 	else
 	{
-		m = n;
+		x = n;
 	}
 
-	div = m;
+	div = x;
 	dig = 1;
 
 	while (div > 9)
@@ -27,7 +27,7 @@ void print_number(int n)
 		dig *= 10;
 	}
 
-	for (; dig >= 1; dig /=10)
+	for (; dig >= 1; dig /= 10)
 	{
 		_putchar(((x / dig) % 10) + '0');
 	}
