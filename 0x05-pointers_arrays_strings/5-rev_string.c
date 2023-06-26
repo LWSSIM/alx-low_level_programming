@@ -13,6 +13,7 @@ void rev_string(char *s)
 	{
 		Z++;
 	}
+	Z--;
 
 	while (A < Z)
 	{
