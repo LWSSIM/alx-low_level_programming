@@ -16,4 +16,8 @@ int _strlen(char *s);
 /*print string*/
 void _puts(char *str);
 
+/*print reversed string*/
+void print_rev(char *s);
+
+
 #endif
