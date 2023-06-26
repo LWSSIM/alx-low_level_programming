@@ -3,6 +3,7 @@
 /**
  * _strlen - return lenght of input string
  * @s: string pointer
+ * Return: 'i' loop counter == str length
  */
 int _strlen(char *s)
 {
