@@ -34,4 +34,7 @@ void print_array(int *a, int n);
 /*copies str form src 2 dest*/
 char *_strcpy(char *dest, char *src);
 
+/*convert str to int*/
+int _atoi(char *s);
+
 #endif
