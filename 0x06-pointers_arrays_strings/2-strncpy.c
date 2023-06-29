@@ -11,12 +11,12 @@ char *_strncpy(char *dest, char *src, int n)
 {
 	char *p = dest;
 
-	for (; *src != '\0' && n > 0; ++src; --n)
+	for (; *src != '\0' && n > 0; ++src, --n)
 	{
 		*p = *src;
 		++p;
 	}
-	if ( n == 0)
+	if (n == 0)
 	{
 		*p = '\0';
 	}
