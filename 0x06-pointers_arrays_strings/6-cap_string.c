@@ -24,7 +24,7 @@ char *cap_string(char *str)
 			cap_n = 1;
 		}
 
-		else if ( cap_n && *p >= 'a' && *p <= 'z')
+		else if (cap_n && *p >= 'a' && *p <= 'z')
 		{
 			*p = *p - ('a' - 'A');
 			cap_n = 0;
