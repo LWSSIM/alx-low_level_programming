@@ -10,6 +10,9 @@ char *_strcat(char *dest, char *src);
 /*append n byte*/
 char *_strncat(char *dest, char *src, int n);
 
+/*coppy string n bytes*/
+char *_strncpy(char *dest, char *src, int n);
+
 
 
 #endif
