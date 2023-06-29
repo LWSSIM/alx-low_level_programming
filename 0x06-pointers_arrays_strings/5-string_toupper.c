@@ -2,12 +2,13 @@
 
 /**
  * string_toupper - convert lowercase to upper in string
+ * @str input str
  * Return: updated string
  */
 char *string_toupper(char *str)
 {
 	if (str == NULL)
-		return NULL;
+		return (NULL);
 
 	char *p = str;
 
