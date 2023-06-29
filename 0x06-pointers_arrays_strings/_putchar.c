@@ -1,1 +1,7 @@
-/root/alx-low_level_programming/0x02-functions_nested_loops/_putchar.c
+#include <unistd.h>
+#include "main.h"
+
+int _putchar(char c)
+{
+	 return (write(1, &c, 1));
+}
