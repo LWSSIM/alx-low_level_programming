@@ -19,6 +19,9 @@ int _strcmp(char *s1, char *s2);
 /*reverse array of int content*/
 void reverse_array(int *a, int n);
 
+/*lowcase to uppcase in str*/
+char *string_toupper(char *);
+
 
 
 #endif
