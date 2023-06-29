@@ -22,6 +22,9 @@ void reverse_array(int *a, int n);
 /*lowcase to uppcase in str*/
 char *string_toupper(char *);
 
+/*Capitalizes string*/
+char *cap_string(char *);
+
 
 
 #endif
