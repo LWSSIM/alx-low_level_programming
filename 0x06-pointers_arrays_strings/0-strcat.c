@@ -3,7 +3,7 @@
 /**
  * _strcat -  append 2 strings
  * @dest: pointer to storring adress
- * @scr: pointer to source adress
+ * @src: pointer to source adress
  *
  * Return: appended str
  */
