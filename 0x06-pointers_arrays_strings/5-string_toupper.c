@@ -7,10 +7,10 @@
  */
 char *string_toupper(char *str)
 {
+	char *p = str;
+
 	if (str == 0)
 		return (0);
-
-	char *p = str;
 
 	while (*p != '\0')
 	{
