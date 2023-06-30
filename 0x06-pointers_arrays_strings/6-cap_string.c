@@ -1,41 +1,25 @@
 #include "main.h"
 
 /**
- * cap - capitalize all words of string
- * @str: string to update
- * Return: updated str
+ * cap_string - capitalizes all words of a string.
+ *
+ *@s: string to be changed
+ * Return: string
  */
-char *cap_string(char *str)
+char *cap_string(char *s)
 {
-	char *p = str;
-	int cap_n = 1;
+	int i;
 
-	if (str == 0)
-		return (0);
-
-	while (*p != '\0')
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		if (*p == ' ' || *p == '\t' || *p == '\n'
-			|| *p == ',' || *p == ';' || *p == '.'
-			|| *p == '!' || *p == '?' || *p == '"'
-			|| *p == '(' || *p == ')' || *p == '{'
-			|| *p == '}')
-		{
-			cap_n = 1;
-		}
-
-		else if (cap_n && *p >= 'a' && *p <= 'z')
-		{
-			*p = *p - ('a' - 'A');
-			cap_n = 0;
-		}
-		else
-		{
-			cap_n = 0;
-		}
-
-		p++;
+		if (i == 0 && (s[i] >= 'a' && s[i] <= 'z'))
+			s[i] -= 32;
+		if ((s[i] >= 'a' && s[i] <= 'z')
+				&& !((s[i - 1] >= 'a' && s[i - 1] <= 'z')
+					|| (s[i - 1] >= 'A' && s[i - 1] <= 'Z'))
+				&& !(s[i - 1] >= '0' && s[i - 1] <= '9')
+				&& s[i - 1] != '-')
+			s[i] -= 32;
 	}
-
-	return (str);
+	return (s);
 }
