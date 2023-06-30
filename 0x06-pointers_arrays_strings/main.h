@@ -28,6 +28,9 @@ char *cap_string(char *);
 /*encode str to 1337*/
 char *leet(char *);
 
+/*encode str to rot13*/
+char *rot13(char *);
+
 
 
 #endif
