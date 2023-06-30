@@ -3,11 +3,11 @@
 /**
  * rot13 - encode input string with rot13
  * @s: input string
- * Return: s `encoded`
+ * Return: s encoded
  */
 char *rot13(char *s)
 {
-	char alpha[] = "ABCDEFGHIJLKMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz",
+	char alpha[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
 	     rot[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
 	int i, j;
