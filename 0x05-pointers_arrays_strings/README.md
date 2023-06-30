@@ -3,7 +3,7 @@
 <h1>Concepts</h1>
 <ul>
 <li><a href='https://www.tutorialspoint.com/cprogramming/c_arrays.htm'>Arrays</a> & <a href='https://www.tutorialspoint.com/cprogramming/c_pointers.htm'>Pointers</a></li>
-<li>Data Structures</li>
+<li><a href='https://www.geeksforgeeks.org/learn-data-structures-and-algorithms-dsa-tutorial/?ref=shm'>Data Structures</a></li>
 </ul>
 
 <h2>General</h2>
