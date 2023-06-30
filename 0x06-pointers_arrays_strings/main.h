@@ -25,6 +25,9 @@ char *string_toupper(char *);
 /*Capitalizes string*/
 char *cap_string(char *);
 
+/*encode str to 1337*/
+char *leet(char *);
+
 
 
 #endif
