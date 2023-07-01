@@ -31,6 +31,9 @@ char *leet(char *);
 /*encode str to rot13*/
 char *rot13(char *);
 
+/*print an int*/
+void print_number(int n);
+
 
 
 #endif
