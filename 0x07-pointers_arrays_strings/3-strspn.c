@@ -4,7 +4,7 @@
  * _strspn - get lenght of prefix substring
  * @s: pointer to a prefix sub-str
  * @accept: pointer to chars allowed in prefix
- * Reutrn: number of bytes of s which contains bytes from accept
+ * Return: number of bytes of s which contains bytes from accept
  */
 unsigned int _strspn(char *s, char *accept)
 {
