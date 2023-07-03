@@ -34,6 +34,10 @@ char *rot13(char *);
 /*print an int*/
 void print_number(int n);
 
+/*add 2 numbers*/
+char *infinite_add(char *n1, char *n2, char *r, int size_r);
+
+
 
 
 #endif
