@@ -10,4 +10,7 @@ char *_memcpy(char *dest, char *src, unsigned int n);
 /*locate a char in a string*/
 char *_strchr(char *s, char c);
 
+/*get the lenght of a prefix substring*/
+unsigned int _strspn(char *s, char *accept);
+
 #endif
