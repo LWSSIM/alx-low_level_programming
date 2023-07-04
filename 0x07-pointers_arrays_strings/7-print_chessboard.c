@@ -2,6 +2,7 @@
 
 /**
  * print_chessboard - prints the chessboard
+ * @a:board array
  */
 void print_chessboard(char (*a)[8])
 {
