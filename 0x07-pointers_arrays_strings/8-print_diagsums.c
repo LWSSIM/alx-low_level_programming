@@ -3,7 +3,7 @@
 
 /**
  * print_diagsums - prints the sum of two diagonals of a n*n matrix of int
- * @a: matrix
+ * @a: pointer matrix
  * @size: size of matrix
  */
 void print_diagsums(int *a, int size)
