@@ -18,4 +18,7 @@ char *_strpbrk(char *s, char *accept);
 
 /*locate sub string*/
 char *_strstr(char *haystack, char *needle);
+
+/*print the chessboard*/
+void print_chessboard(char (*a)[8]);
 #endif
