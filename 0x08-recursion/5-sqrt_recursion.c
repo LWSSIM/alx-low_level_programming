@@ -29,16 +29,16 @@ int _sqrt_recursion(int n)
  * @e:end
  * Return:results to sqrt recursion
  */
-int sqrt_calc(int n, int s, int e)
+int sqrt_calc(int n, unsigned long s, unsigned long e)
 {
-	unsigned int mid = (s + e) / 2;
+	unsigned long mid = (s + e) / 2;
 
 	if (s > e)
 		return (e);
-	if ((unsigned int)(mid * mid) == (unsigned int)n)
+	if ((mid * mid) == (unsigned long)n)
 		return (mid);
 
-	if ((unsigned int)mid * mid > (unsigned int)n)
+	if (mid * mid > (unsigned long)n)
 		return (sqrt_calc(n, s, mid - 1));
 	else
 		return (sqrt_calc(n, mid + 1, e));
