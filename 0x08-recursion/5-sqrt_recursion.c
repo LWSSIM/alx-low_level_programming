@@ -1,6 +1,6 @@
 #include "main.h"
 
-int sqrt_calc(int n, int s, int e);
+int sqrt_calc(int n, unsigned long s, unsigned long e);
 /**
  * _sqrt_recursion - return natural squrt of input
  * @n: input
