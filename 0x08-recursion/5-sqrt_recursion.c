@@ -30,10 +30,10 @@ int sqrt_calc(int n, int s, int e)
 
 	if (s > e)
 		return (e);
-	if (mid * mid == n)
+	if ((unsigned int)(mid * mid) == (unsigned int)n)
 		return (mid);
 
-	if (mid * mid > n)
+	if ((unsigned int)mid * mid > (unsigned int(n)
 		return (sqrt_calc(n, s, mid - 1));
 	else
 		return (sqrt_calc(n, mid + 1, e));
