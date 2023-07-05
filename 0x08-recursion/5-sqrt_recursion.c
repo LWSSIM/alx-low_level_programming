@@ -9,13 +9,18 @@ int sqrt_calc(int n, int s, int e);
 
 int _sqrt_recursion(int n)
 {
+	int res;
+
 	if (n < 0)
-		return (-1);
-	if (n > 1 && n % 2 != 0)
 		return (-1);
 	if (n == 0 || n == 1)
 		return (n);
-	return (sqrt_calc(n, 0, n));
+
+	res = (sqrt_calc(n, 0, n));
+	if ((res * res) == n)
+		return (res);
+	else
+		return (-1);
 }
 /**
  * sqrt_calc - binary search to calc sqrt
