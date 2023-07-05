@@ -26,7 +26,7 @@ int _sqrt_recursion(int n)
  */
 int sqrt_calc(int n, int s, int e)
 {
-	int mid = (s + e) / 2;
+	unsigned int mid = (s + e) / 2;
 
 	if (s > e)
 		return (e);
