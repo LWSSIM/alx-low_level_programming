@@ -13,6 +13,9 @@ int _strlen_recursion(char *s);
 /*return fact of number*/
 int factorial(int n);
 
+/*return natural square root of a number*/
+int _sqrt_recursion(int n);
+
 /*putchar*/
 int _putchar(char c);
 
