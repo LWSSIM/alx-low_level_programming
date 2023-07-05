@@ -7,6 +7,9 @@ void _puts_recursion(char *s);
 /*print str in reverse*/
 void _print_rev_recursion(char *s);
 
+/*return length of str*/
+int _strlen_recursion(char *s);
+
 /*putchar*/
 int _putchar(char c);
 
