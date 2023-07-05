@@ -33,7 +33,7 @@ int sqrt_calc(int n, int s, int e)
 	if ((unsigned int)(mid * mid) == (unsigned int)n)
 		return (mid);
 
-	if ((unsigned int)mid * mid > (unsigned int(n)
+	if ((unsigned int)mid * mid > (unsigned int)n)
 		return (sqrt_calc(n, s, mid - 1));
 	else
 		return (sqrt_calc(n, mid + 1, e));
