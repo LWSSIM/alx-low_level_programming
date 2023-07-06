@@ -8,7 +8,7 @@ int _sqrt_recursion(int n);
  * @div: divsor
  * Return: 0 || 1
  */
-bool is_prime(int n, int div)
+int is_prime(int n, int div)
 {
 	if (n < 2)
 		return (0);
