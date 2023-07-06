@@ -1,5 +1,8 @@
 #include "main.h"
 
+int str_len(char *s);
+int eq(char *s, char *start, char *end);
+
 /**
  * is_palindrome - check if palindrome
  * @s: pointer to string
@@ -17,7 +20,7 @@ int is_palindrome(char *s)
 /**
  * str_len - calc str length
  * @s: str
- * Return: len
+ * Return: lent
  */
 int str_len(char *s)
 {
@@ -28,8 +31,9 @@ int str_len(char *s)
 /**
  * eq - check char equality
  * @s: str
- * @len: str length
- * @x: move pointer
+ * @start: str 
+ * @end: str
+ * Return: 0 || 1
  */
 int eq(char *s, char *start, char *end)
 {
