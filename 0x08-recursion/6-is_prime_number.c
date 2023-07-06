@@ -1,7 +1,5 @@
 #include "main.h"
 
-int _sqrt_recursion(int n);
-
 /**
  * is_prime - calc prime
  * @n: input
@@ -10,8 +8,6 @@ int _sqrt_recursion(int n);
  */
 int is_prime(int n, int div)
 {
-	if (n < 2)
-		return (0);
 	if (div == 1)
 		return (1);
 	if (n % div == 0)
@@ -25,7 +21,8 @@ int is_prime(int n, int div)
  */
 int is_prime_number(int n)
 {
-	int div = _sqrt_recursion(n);
+	if (n < 2)
+		return (0);
 
-	return (is_prime(n, div));
+	return (is_prime(n, n - 1));
 }
