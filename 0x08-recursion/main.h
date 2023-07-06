@@ -16,6 +16,9 @@ int factorial(int n);
 /*return natural square root of a number*/
 int _sqrt_recursion(int n);
 
+/*check if prime*/
+int is_prime_number(int n);
+
 /*putchar*/
 int _putchar(char c);
 
