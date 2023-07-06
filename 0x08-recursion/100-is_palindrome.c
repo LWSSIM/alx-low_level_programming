@@ -31,7 +31,7 @@ int str_len(char *s)
 /**
  * eq - check char equality
  * @s: str
- * @start: str 
+ * @start: str
  * @end: str
  * Return: 0 || 1
  */
