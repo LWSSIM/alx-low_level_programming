@@ -1,1 +1,6 @@
-../0x08-recursion/_putchar.c
+#include <unistd.h>
+#include "main.h"
+int _putchar(char c)
+{
+	  return (write(1, &c, 1));
+}
