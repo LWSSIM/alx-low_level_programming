@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
 		return (0);
 	}
 	i = 0;
-	while(dig > 0)
+	while (dig > 0)
 	{
 		if (dig >= 25)
 			dig -= 25;
