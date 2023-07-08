@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <stdlib.c>
+#include <stdlib.h>
 
 /**
  * main - print min num of coins to make change
@@ -9,12 +9,13 @@
  */
 int main(int argc, char *argv[])
 {
+	int dig, i;
+
 	if (argc != 2)
 	{
 		printf("Error\n");
 		return (1);
 	}
-	int dig, i;
 
 	dig = atoi(argv[1]);
 	if (dig < 0)
@@ -22,25 +23,21 @@ int main(int argc, char *argv[])
 		printf("0\n");
 		return (0);
 	}
-	for (i = 0; n > 0; i++)
+	i = 0;
+	while(dig > 0)
 	{
-		switch (n)
-		{
-			case 25:
-				n -= 25;
-				break;
-			case 10:
-				n -= 10;
-				break;
-			case 5:
-				n -= 5;
-				break;
-			case 2:
-				n -= 2;
-				break;
-			default:
-				n -= 1;
-		}
+		if (dig >= 25)
+			dig -= 25;
+		else if (dig >= 10)
+			dig -= 10;
+		else if (dig >= 5)
+			dig -= 5;
+		else if (dig >= 2)
+			dig -= 2;
+		else if (dig >= 1)
+			dig -= 1;
+
+		i++;
 	}
 	printf("%d\n", i);
 	return (0);
