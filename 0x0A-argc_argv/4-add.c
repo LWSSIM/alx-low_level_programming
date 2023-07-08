@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+#include <ctype.h>
 /**
  * main - add positive numbers
  * @argc: arg count
@@ -16,7 +16,7 @@ int main(int argc, char *argv[])
 	}
 	else
 	{
-		int i, sum = 0;
+		int i, dig, sum = 0;
 
 		for (i = 1; i < argc; i++)
 		{
@@ -31,8 +31,7 @@ int main(int argc, char *argv[])
 				}
 				p++;
 			}
-			int dig = atoi(argv[i]);
-
+			dig = atoi(argv[i]);
 			sum += dig;
 		}
 		printf("%d\n", sum);
