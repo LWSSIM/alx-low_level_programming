@@ -31,9 +31,9 @@ char *str_concat(char *s1, char *s2)
 		p[i] = s2[i];
 
 	for (j = 0; j < z2; j++)
-		p[i++] = s2[j];
+		p[z1 + j] = s2[j];
 
-	p[i] = '\0';
+	p[z1 + z2] = '\0';
 
 	return (p);
 }
