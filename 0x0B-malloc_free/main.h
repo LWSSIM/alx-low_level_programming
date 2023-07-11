@@ -13,4 +13,6 @@ char *str_concat(char *s1, char *s2);
 int **alloc_grid(int width, int height);
 /*free 2 dim array from alloc_grid*/
 void free_grid(int **grid, int height);
+/*concate args of ur program*/
+char *argstostr(int ac, char **av);
 #endif /*main.h*/
