@@ -7,6 +7,7 @@ int _putchar(char c);
 char *create_array(unsigned int size, char c);
 /*duplicate str*/
 char *_strdup(char *str);
-
+/*concate 2 strings*/
+char *str_concat(char *s1, char *s2);
 
 #endif /*main.h*/
