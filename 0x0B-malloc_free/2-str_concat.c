@@ -10,19 +10,15 @@
 char *str_concat(char *s1, char *s2)
 {
 	char *p;
-	int z1, z2, i, j;
+	unsigned int z1, z2, i, j;
 
 	if (s1 == 0)
 		s1 = "";
 	else if (s2 == 0)
 		s2 = "";
 
-	z1 = 0, z2 = 0;
-
-	while (s1[z1] != '\0')
-		z1++;
-	while (s2[z2] != '\0')
-		z2++;
+	z1 = strlen(s1);
+	z2 = strlen(s2);
 
 	p = malloc(sizeof(char) * (z1 + z2 + 1));
 
