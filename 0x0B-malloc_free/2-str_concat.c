@@ -25,7 +25,7 @@ char *str_concat(char *s1, char *s2)
 		return (0);
 
 	for (i = 0; i < z1 && s1 != 0; i++)
-		p[i] = s2[i];
+		p[i] = s1[i];
 
 	for (j = 0; j < z2 && s2 != 0; j++)
 		p[z1 + j] = s2[j];
@@ -33,5 +33,5 @@ char *str_concat(char *s1, char *s2)
 	p[z1 + z2] = '\0';
 
 	return (p);
-	free (p);
+	free(p);
 }
