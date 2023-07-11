@@ -11,4 +11,6 @@ char *_strdup(char *str);
 char *str_concat(char *s1, char *s2);
 /*pointer to grid*/
 int **alloc_grid(int width, int height);
+/*free 2 dim array from alloc_grid*/
+void free_grid(int **grid, int height);
 #endif /*main.h*/
