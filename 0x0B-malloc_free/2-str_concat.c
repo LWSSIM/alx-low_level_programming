@@ -17,14 +17,19 @@ char *str_concat(char *s1, char *s2)
 	else if (s2 == 0)
 		s2 = "";
 
-	z1 = strlen(s1);
-	z2 = strlen(s2);
+	while (s1[z1] != '\0')
+		z1++;
+	while (s2[z2] != '\0')
+		z2++;
 
 	p = malloc(sizeof(char) * (z1 + z2 + 1));
 
 	if (p == 0)
+		return (0);
+
 	for (i = 0; i < z1; i++)
 		p[i] = s2[i];
+
 	for (j = 0; j < z2; j++)
 		p[i++] = s2[j];
 
