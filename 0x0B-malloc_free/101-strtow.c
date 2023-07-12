@@ -36,12 +36,10 @@ char **strtow(char *str)
 	int wordIndex, wordLen, word, i;
 	int len = wrdc(str);
 	char *CrntWord = 0;
+	char **words = (char **)malloc((len + 1) * sizeof(char *));
 
 	if (str == 0 || *str == '\0')
 		return (0);
-
-	char **words = (char **)malloc((len + 1) * sizeof(char *));
-
 	if (words == 0)
 		return (0);
 
