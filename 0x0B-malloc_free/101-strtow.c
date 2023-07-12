@@ -38,6 +38,8 @@ char **strtow(char *str)
 	char *CrntWord = 0;
 	char **words = (char **)malloc((len + 1) * sizeof(char *));
 
+	if (len == 0)
+		return (0);
 	if (str == 0 || *str == '\0')
 		return (0);
 	if (words == 0)
