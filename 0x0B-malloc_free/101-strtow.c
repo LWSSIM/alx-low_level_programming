@@ -62,7 +62,7 @@ char **strtow(char *str)
 			{
 				word = 1;
 				wordLen = 1;
-				CrntWord = (char *)malloc(len * sizeof(char));
+				CrntWord = (char *)malloc((len + 1) * sizeof(char));
 				if (CrntWord == 0)
 				{
 					for (i = 0; i < wordIndex; i++)
@@ -73,7 +73,10 @@ char **strtow(char *str)
 					return (0);
 				}
 			}
-			CrntWord[wordLen++] = *str;
+			else
+				wordLen++;
+
+			CrntWord[wordLen - 1] = *str;
 		}
 		str++;
 	}
