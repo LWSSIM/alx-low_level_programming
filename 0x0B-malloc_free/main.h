@@ -15,4 +15,6 @@ int **alloc_grid(int width, int height);
 void free_grid(int **grid, int height);
 /*concate args of ur program*/
 char *argstostr(int ac, char **av);
+/*split string into words*/
+char **strtow(char *str);
 #endif /*main.h*/
