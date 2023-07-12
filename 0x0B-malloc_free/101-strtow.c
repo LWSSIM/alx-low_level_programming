@@ -33,12 +33,12 @@ int wrdc(char *str)
  */
 char **strtow(char *str)
 {
-	if (str == 0 || *str == '\0')
-		return (0);
-
 	int wordIndex, wordLen, word, i;
 	int len = wrdc(str);
 	char *CrntWord = 0;
+
+	if (str == 0 || *str == '\0')
+		return (0);
 
 	char **words = (char **)malloc((len + 1) * sizeof(char *));
 
