@@ -33,7 +33,7 @@ int wrdc(char *str)
  */
 char **strtow(char *str)
 {
-	int wordIndex, wordLen, word, i;
+	int wordIndex, wordLen, word, maxw, i;
 	int len = wrdc(str);
 	char *CrntWord = 0;
 	char **words = (char **)malloc((len + 1) * sizeof(char *));
@@ -61,8 +61,8 @@ char **strtow(char *str)
 			if (word == 0)
 			{
 				word = 1;
-				wordLen = 1;
-				CrntWord = (char *)malloc((len + 1) * sizeof(char));
+				maxw = len;
+				CrntWord = (char *)malloc((maxw + 1) * sizeof(char));
 				if (CrntWord == 0)
 				{
 					for (i = 0; i < wordIndex; i++)
@@ -73,17 +73,14 @@ char **strtow(char *str)
 					return (0);
 				}
 			}
-			else
-				wordLen++;
-
-			CrntWord[wordLen - 1] = *str;
+			CrntWord[wordLen++] = *str;
 		}
 		str++;
 	}
 	if (word == 1)
 	{
 		CrntWord[wordLen] = '\0';
-		words[wordIndex] = CrntWord;
+		words[wordIndex++] = CrntWord;
 	}
 	words[wordIndex] = 0;
 	return (words);
