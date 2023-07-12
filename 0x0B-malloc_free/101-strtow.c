@@ -36,10 +36,7 @@ char **strtow(char *str)
 	if (str == 0 || *str == '\0')
 		return (0);
 
-	int wordIndex = 0;
-	int wordLen = 0;
-	int word = 0;
-	int i;
+	int wordIndex, wordLen, word, i;
 	int len = wrdc(str);
 	char *CrntWord = 0;
 
@@ -47,6 +44,8 @@ char **strtow(char *str)
 
 	if (words == 0)
 		return (0);
+
+	wordIndex = 0, wordLen = 0, word = 0;
 	while (*str != '\0')
 	{
 		if (*str == ' ')
