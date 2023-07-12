@@ -61,6 +61,7 @@ char **strtow(char *str)
 			if (word == 0)
 			{
 				word = 1;
+				wordLen = 1;
 				CrntWord = (char *)malloc(len * sizeof(char));
 				if (CrntWord == 0)
 				{
