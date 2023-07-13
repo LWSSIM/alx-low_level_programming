@@ -5,7 +5,7 @@
  * string_nconcat - concat 2 strs
  * @s1:1st str
  * @s2:2nd str
- * n: 1st n bytes of s2
+ * @n: 1st n bytes of s2
  * Return: ptr to mem_space(s1+n(s2)) || NULL
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
