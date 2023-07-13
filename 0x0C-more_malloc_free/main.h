@@ -10,5 +10,6 @@ void *malloc_checked(unsigned int b);
 char *string_nconcat(char *s1, char *s2, unsigned int n);
 /*allocate mem set to 0*/
 void *_calloc(unsigned int nmemb, unsigned int size);
-
+/*ordered array of ints*/
+int *array_range(int min, int max);
 #endif
