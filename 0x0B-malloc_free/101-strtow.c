@@ -84,5 +84,14 @@ char **strtow(char *str)
 		words[wordIndex++] = CrntWord;
 	}
 	words[wordIndex] = 0;
+	if (wordIndex != len)
+	{
+		for (i = 0; i < wordIndex; i++)
+		{
+			free(words[i]);
+		}
+		free(words);
+		return (0);
+	}
 	return (words);
 }
