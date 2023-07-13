@@ -1,7 +1,7 @@
 #0x0B-malloc_free
 
 <h1>General</h1>
-<p>A study of memory block allocation, automatically  dinamically</p>
+<p>A study of memory block allocation, automatically  dynamically</p>
 <h3>Objectives</h3>
 <ul>
 <li>difference between <a href='https://www.geeksforgeeks.org/static-and-dynamic-memory-allocation-in-c/'>auto</a>/<a href='http://www.tutorialspoint.com/cprogramming/c_memory_management.htm'>dynamic</a> allocation</li>
