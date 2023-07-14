@@ -6,13 +6,14 @@
  * @ptr: to old mem block
  * @old_size: in bytes
  * @new_size: in bytes
+ * Return: NULL || ptr || new_ptr
  */
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
 	unsigned int min_size, i;
 	unsigned char *ptr_byte, *new_ptr_byte;
 	void *new_ptr;
-	
+
 	if (new_size == old_size)
 		return (ptr);
 
