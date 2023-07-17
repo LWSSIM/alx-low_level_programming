@@ -13,6 +13,11 @@ struct dog
 	char *owner;
 };
 
+/**
+ * dog_t - typedef[struct dog]
+ */
+typedef struct dog dog_t;
+
 /*functions*/
 
 /*fn(init var of struct dog type)*/
@@ -24,8 +29,4 @@ dog_t *new_dog(char *name, float age, char *owner);
 /*let the DOGS out*/
 void free_dog(dog_t *d);
 
-/**
- * dog_t - typedef[struct dog]
- */
-typedef struct dog dog_t;
 #endif /*DOG_H*/
