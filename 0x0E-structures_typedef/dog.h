@@ -15,4 +15,6 @@ struct dog
 
 /*fn(init var of struct dog type)*/
 void init_dog(struct dog *d, char *name, float age, char *owner);
+/*fn(print doggo struct)*/
+void print_dog(struct dog *d);
 #endif /*DOG_H*/
