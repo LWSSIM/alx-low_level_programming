@@ -14,9 +14,8 @@
     fun_ptr(10);  &lt;-
 </code></pre>
 <p>4- Array of function pointers:</p>
-<pre><code>// fun_ptr_arr is an array of function pointers
-
-void (*fun_ptr_arr[])(int, int) = {...,....};
+<pre><code> /*fun_ptr_arr is an array of function pointers*/
+     void (*fun_ptr_arr[])(int, int) = {...,....};
 </code></pre>
 <h3 id="objectives">Objectives</h3>
 <ul>
