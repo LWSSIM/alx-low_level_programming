@@ -3,49 +3,81 @@
 #include <stdarg.h>
 
 /**
+ * c_fun - print char
+ * @args: list of arguments
+ */
+void c_fun(va_list args)
+{
+	printf("%c", va_arg(args, int));
+}
+/**
+ * i_fun - print int
+ * @args: arguments
+ */
+void i_fun(va_list args)
+{
+	printf("%i", va_arg(args, int));
+}
+/**
+ * s_fun - print str
+ * @args: args
+ */
+void s_fun(va_list args)
+{
+	char *s;
+
+	s = va_arg(args, char *);
+	switch (s == NULL)
+	{
+		case 1:
+			s = "(nil)";
+			break;
+		default:
+			break;
+	}
+	printf("%s", s);
+}
+/**
+ * f_fun - print float
+ * @args: args
+ */
+void f_fun(va_list args)
+{
+	printf("%f", va_arg(args, double));
+}
+/**
  * print_all - print any passed args based on format specifier
  * @fomrat: const ptr to type specifier
  */
 void print_all(const char * const format, ...)
 {
 	va_list args;
-	char *s;
-	int n;
-	float f;
-	char c;
-	unsigned int i;
+	int i, j;
+	f_list f_print[] = {
+		{'c', c_fun},
+		{'i', i_fun},
+		{'s', s_fun},
+		{'f', f_fun}
+	};
 
 	va_start(args, format);
-
+	i = 0;
 	while (format && format[i])
-	{
-		switch (format[i])
+	{	
+		j = 0;
+		while (f_print[j].flag)
 		{
-			case 'c':
-				c = va_arg(args, int);
-				printf("%c", c);
-				break;
-			case 'i':
-				n = va_arg(args, int);
-				printf("%i", n);
-				break;
-			case 'f':
-				f = va_arg(args, double);
-				printf("%f", f);
-				break;
-			case 's':
-				s = va_arg(args, char *);
-				if (s)
-					printf("%s", s);
-				else
-					printf("(nil)");
-				break;
+			if (format[i] == f_print[j].flag)
+			{
+				f_print[j].f(args);
+				if (format[i + 1])
+					printf(", ");
+			}
+			j++;
 		}
-		if (format[i + 1] && (format[i] == 'c' || format[i] == 'i' || format[i] == 'f' || format[i] == 's'))
-			printf(", ");
-
 		i++;
 	}
 	va_end(args);
 	printf("\n");
 }
+
