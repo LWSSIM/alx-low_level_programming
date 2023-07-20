@@ -10,7 +10,7 @@
 int main(int ac, char *av[])
 {
 	unsigned char *p;
-	int nb;
+	int nb, i;
 
 	if (ac != 2)
 	{
@@ -26,13 +26,14 @@ int main(int ac, char *av[])
 	}
 
 	p = (unsigned char *)main;
-	while (nb > 0 && *p)
+	for (i = 0; i < nb; i++)
 	{
-		printf("%02x ", *p);
-		p++;
-		nb--;
+		if (i == (nb - 1))
+		{
+			printf("%02hhx\n ", p[i]);
+			return (0);
+		}
+		printf("%02hhx ", p[i]);
 	}
-	printf("\n");
-
 	return (0);
 }
