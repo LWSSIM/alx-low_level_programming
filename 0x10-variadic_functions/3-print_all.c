@@ -47,7 +47,7 @@ void f_fun(va_list args)
 }
 /**
  * print_all - print any passed args based on format specifier
- * @fomrat: const ptr to type specifier
+ * @format: const ptr to type specifier
  */
 void print_all(const char * const format, ...)
 {
@@ -63,7 +63,7 @@ void print_all(const char * const format, ...)
 	va_start(args, format);
 	i = 0;
 	while (format && format[i])
-	{	
+	{
 		j = 0;
 		while (f_print[j].flag)
 		{
