@@ -8,7 +8,7 @@
  * @separator: str to be printed between occurencens
  * @n: nb of integers paased
  */
-void print_numbers(const char *separator, const unsigned n, ...)
+void print_numbers(const char *separator, const unsigned int n, ...)
 {
 	va_list args;
 	unsigned int i;
@@ -17,7 +17,7 @@ void print_numbers(const char *separator, const unsigned n, ...)
 		exit(1);
 
 	va_start(args, n);
-	
+
 	for (i = 0; i < n; i++)
 	{
 		printf("%d", va_arg(args, int));
