@@ -27,7 +27,6 @@ void print_buffer(char *b, int size)
 			if (j % 2 == 1)
 				putchar(' ');
 		}
-		putchar(' ');
 
 		for (j = i; j < i + 10; j++)
 		{
