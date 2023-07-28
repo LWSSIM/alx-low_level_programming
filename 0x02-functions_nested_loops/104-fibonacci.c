@@ -1,40 +1,47 @@
 #include <stdio.h>
 
 /**
-* main - find and print the 98 fibonacci
-*
-* Return: 0
-*/
+ * main - find and print the 98 fibonacci
+ *
+ * Return: 0
+ */
 int main(void)
 {
-unsigned long int j, k, a, b, c, d;
-int i;
+	unsigned long j, k, sum, a11, b12, c21, d22, x1, x2;
+	int i;
 
-j = 1;
-k = 2;
+	j = 1;
+	k = 2;
+	printf("%lu", j);
+	for (i = 1; i < 91; i++)
+	{
+		sum = j + k;
+		printf(", %lu", k);
 
-printf("%lu", j);
-
-for (i = 1; i < 91; i++)
-{
-printf(", %lu", k);
-k = k + j;
-j = k - j;
-}
-a = j / 1000000000;
-b = j % 1000000000;
-c = k / 1000000000;
-d = k % 1000000000;
-
-for (i = 92; i <= 98; i++)
-{
-printf(", %lu", c + (d / 1000000000));
-printf("%lu", c % 1000000000);
-c = c + a;
-a = c - a;
-d = d + b;
-b = d - b;
-}
-printf("\n");
-return (0);
+		j = k;
+		k = sum;
+	}
+	a11 = j / 1000000000;
+	b12 = j % 1000000000;
+	c21 = k / 1000000000;
+	d22 = k % 1000000000;
+	for (i = 92; i <= 98; i++)
+	{
+		x1 = a11 + c21;
+		x2 = b12 + d22;
+		if (b12 + d22 > 9999999999)
+		{
+			x1++;
+			x2 = x2 % 10000000000;
+		}
+		printf("%lu%lu", x1, x2);
+		if (i != 98)
+			printf(", ");
+		a11 = c21;
+		b12 = d22;
+		c21 = x1;
+		d22 = x2;
+	}
+	printf("\n");
+	return (0);
 }
