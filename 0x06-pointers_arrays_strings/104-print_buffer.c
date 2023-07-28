@@ -13,7 +13,6 @@ void print_buffer(char *b, int size)
 	if (size <= 0)
 		putchar('\n');
 
-	i = 0;
 	for (i = 0; i < size; i += 10)
 	{
 		printf("%08x: ", i);
@@ -24,7 +23,7 @@ void print_buffer(char *b, int size)
 				printf("%02x", b[j]);
 			else
 				printf("  ");
-			if (j % 2 == 1)
+			if (j % 2 == 1 && j != i + 10)
 				putchar(' ');
 		}
 
