@@ -18,30 +18,24 @@ void print_buffer(char *b, int size)
 		printf("%08x: ", i);
 
 		/*print hex 2chars of buff*/
-		for (j = i; j < i + 10 && j < size; j++)
+		for (j = 0; j < 10; j++)
 		{
-			printf("%02x", b[j]);
-
-			if (j % 2 == 1)
-				putchar(' ');
-		}
-
-		for (; j < i + 10; j++)
-		{
-			printf("  ");
+			if (j <= size -i - 1)
+				printf("%02x", b[j]);
+			else 
+				printf("  ");
 			if (j % 2 == 1)
 				putchar(' ');
 		}
 		putchar(' ');
-
-		for (j = i; j < i + 10 && j < size; j++) /*print chars*/
+		
+		for (j = 0; j <  10 && i + j < size; j++) /*print chars*/
 		{
-			if (b[j] >= 32 && b[j] <= 126)
-				putchar(b[j]);
+			if (b[j + i] >= 32 && b[i + j] <= 126)
+				putchar(b[j + i]);
 			else
 				putchar('.');
 		}
 		putchar('\n');
 	}
 }
-
