@@ -31,4 +31,6 @@ list_t *add_node(list_t **head, const char *str);
 
 /*adds node at end of SLL*/
 list_t *add_node_end(list_t **head, const char *str);
+/*free list_t memory*/
+void free_list(list_t *head);
 #endif /*LISTS_H*/
