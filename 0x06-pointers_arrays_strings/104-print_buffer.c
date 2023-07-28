@@ -23,12 +23,12 @@ void print_buffer(char *b, int size)
 			if (j < size)
 				printf("%02x", b[j]);
 			else
-				printf(" ");
+				printf("  ");
 			if (j % 2 == 1)
-				putchar(' ');
+                                putchar(' ');
 		}
 
-		for (j = i; j < i + 10; j++)
+		for (j = i; j < i + 10; j++) /*print chars*/
 		{
 			if (j < size)
 			{
@@ -42,5 +42,4 @@ void print_buffer(char *b, int size)
 		}
 		putchar('\n');
 	}
-	putchar('\n');
 }
