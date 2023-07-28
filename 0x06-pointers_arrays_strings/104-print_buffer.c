@@ -24,11 +24,10 @@ void print_buffer(char *b, int size)
 			if (i + j < size)
 				printf("%02x", b[i + j]);
 			else
-				printf("  "); /* Print spaces for empty spaces in the last line */
+				printf(" "); /* Print spaces for empty spaces in the last line */
 			if (j % 2 == 1)
 				putchar(' '); /* Separate every two bytes with a space */
 		}
-		putchar(' ');
 		/* Print the content of the buffer as printable characters or '.' */
 		for (j = 0; j < 10; j++)
 		{
