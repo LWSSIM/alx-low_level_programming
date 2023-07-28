@@ -19,10 +19,10 @@ void print_buffer(char *b, int size)
 	{
 		printf("%08x: ", i);
 		/* Print hexadecimal content (2 chars) of the buffer, 2 bytes at a time */
-		for (j = i; j < i + 10; j++)
+		for (j = 0; j <  10; j++)
 		{
-			if (j < size)
-				printf("%02x", b[j]);
+			if (i + j < size)
+				printf("%02x", b[i + j]);
 			else
 				printf("  "); /* Print spaces for empty spaces in the last line */
 			if (j % 2 == 1)
@@ -30,12 +30,13 @@ void print_buffer(char *b, int size)
 		}
 		putchar(' ');
 		/* Print the content of the buffer as printable characters or '.' */
-		for (j = i; j < i + 10; j++)
+		for (j = 0; j < 10; j++)
 		{
-			if (j < size)
+			if (i + j < size)
 			{
-				if (b[j] >= 32 && b[j] <= 126) /* Printable characters are in this range */
-					putchar(b[j]);
+				if (b[i + j] >= 32 && b[i + j] <= 126)
+			/* Printable characters are in this range */
+					putchar(b[i + j]);
 				else
 					putchar('.'); /* Non-printable characters are displayed as '.' */
 			}
