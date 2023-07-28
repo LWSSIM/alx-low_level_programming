@@ -13,7 +13,7 @@ int main(void)
 	j = 1;
 	k = 2;
 	printf("%lu", j);
-	for (i = 1; i < 91; i++)
+	for (i = 0; i < 92; i++)
 	{
 		sum = j + k;
 		printf(", %lu", k);
@@ -25,7 +25,7 @@ int main(void)
 	b12 = j % 1000000000;
 	c21 = k / 1000000000;
 	d22 = k % 1000000000;
-	for (i = 92; i <= 98; i++)
+	for (i = 93; i < 99; i++)
 	{
 		x1 = a11 + c21;
 		x2 = b12 + d22;
