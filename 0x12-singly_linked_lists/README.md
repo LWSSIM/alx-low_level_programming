@@ -24,7 +24,7 @@
 <li>When and why should we use linked lists vs arrays</li>
 <li>How to build and use linked lists</li>
 </ul>
-<h3 id="concept">Concept</h3>
+<h3 id="concept">Concepts</h3>
 <p>-<a href="https://www.geeksforgeeks.org/c-pointers/">C pointers</a>.<br>
 -<a href="https://www.geeksforgeeks.org/data-structures/?ref=shm">Data structures</a><br>
 -<a href="https://www.geeksforgeeks.org/fundamentals-of-algorithms/">Algorithms</a><br>
