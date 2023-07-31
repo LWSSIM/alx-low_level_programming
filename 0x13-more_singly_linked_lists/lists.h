@@ -36,5 +36,6 @@ int pop_listint(listint_t **head);
 listint_t *get_nodeint_at_index(listint_t *head, unsigned int index);
 /*sums all data(n) in a SLL*/
 int sum_listint(listint_t *head);
-
+/*insert a new node in a position*/
+listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n);
 #endif/*MAIN_H*/
