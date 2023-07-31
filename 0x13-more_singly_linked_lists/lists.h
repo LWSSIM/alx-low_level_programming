@@ -26,4 +26,6 @@ size_t listint_len(const listint_t *h);
 listint_t *add_nodeint(listint_t **head, const int n);
 /*add node atr end SLL*/
 listint_t *add_nodeint_end(listint_t **head, const int n);
+/*Frees list*/
+void free_listint(listint_t *head);
 #endif/*MAIN_H*/
