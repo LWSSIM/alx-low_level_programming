@@ -2,7 +2,7 @@
 
 /**
  * free_listint2 - free + ptr
- * @head double ptr to SSL
+ * @head: double ptr to SSL
  */
 void free_listint2(listint_t **head)
 {
