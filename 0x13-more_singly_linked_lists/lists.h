@@ -34,4 +34,7 @@ void free_listint2(listint_t **head);
 int pop_listint(listint_t **head);
 /*return nth node*/
 listint_t *get_nodeint_at_index(listint_t *head, unsigned int index);
+/*sums all data(n) in a SLL*/
+int sum_listint(listint_t *head);
+
 #endif/*MAIN_H*/
