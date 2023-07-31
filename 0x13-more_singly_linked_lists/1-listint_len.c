@@ -2,8 +2,8 @@
 
 /**
  * listint_len - return nb of elmnts in list
- * @h: ptr to list
- * Return: number of nodes
+ * @h: ptr to DLL
+ * Return: lenght of SLL
  */
 size_t listint_len(const listint_t *h)
 {

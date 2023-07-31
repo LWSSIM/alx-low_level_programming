@@ -22,4 +22,6 @@ size_t print_listint(const listint_t *h);
 
 /*return nb of elmnts printed*/
 size_t listint_len(const listint_t *h);
+/*add node at start of SLL*/
+listint_t *add_nodeint(listint_t **head, const int n);
 #endif/*MAIN_H*/
