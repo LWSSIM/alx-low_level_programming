@@ -51,5 +51,7 @@ size_t free_listint_safe(listint_t **h);
 /*find loop in a SLL*/
 listint_t *find_listint_loop(listint_t *head);
 
+/*helper functions*/
+listint_t *find_listint_loop_free(listint_t *head);
 const listint_t **duplist(const listint_t **head, size_t len, const listint_t *node);
 #endif/*MAIN_H*/

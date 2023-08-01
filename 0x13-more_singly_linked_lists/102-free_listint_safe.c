@@ -41,7 +41,7 @@ size_t free_listint_safe(listint_t **h)
 	if (!h || !(*h))
 		return (0);
 
-	loop_id = find_listint_loop(*h);
+	loop_id = find_listint_loop_free(*h);
 	
 	for (node_count = 0; (*h != loop_id || loop) && !(*h); *h = node)
 	{
