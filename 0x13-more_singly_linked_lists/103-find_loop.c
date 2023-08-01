@@ -11,13 +11,22 @@ listint_t *find_listint_loop(listint_t *head)
 
 	sp = head, fp = head;
 
-	while (sp && fp && fp->next)
+	if (head == NULL || head->next == NULL)
+		return (NULL);
+
+	while (fp && fp->next)
 	{
 		sp = sp->next;
 		fp = fp->next->next;
 
 		if (sp == fp)
 		{
+			sp = head;
+			while (sp != fp)
+			{
+				sp = sp->next;
+				fp = fp->next;
+			}
 			return (sp);
 		}
 	}
