@@ -11,18 +11,19 @@ listint_t *find_listint_loop_free(listint_t *head)
 	listint_t *ps, *pe;
 
 
-	if (head == NULL || head->next == NULL)
+	if (!head)
 		return (NULL);
 
-	for (pe = head->next; !pe; pe = pe->next)
+	for (pe = head->next; pe != NULL; pe = pe->next)
 	{
 		if (pe == pe->next)
 			return (pe);
+
 		for (ps = head; ps != pe; ps = ps->next)
 		{
 			if (ps == pe->next)
 				return (pe->next);
-		}		
+		}
 	}
 	return (NULL);
 }
@@ -42,7 +43,7 @@ size_t free_listint_safe(listint_t **h)
 		return (0);
 
 	loop_id = find_listint_loop_free(*h);
-	
+
 	for (node_count = 0; (*h != loop_id || loop) && !(*h); *h = node)
 	{
 		node_count++;
