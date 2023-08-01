@@ -38,4 +38,6 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index);
 int sum_listint(listint_t *head);
 /*insert a new node in a position*/
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n);
+/*delete node at index*/
+int delete_nodeint_at_index(listint_t **head, unsigned int index);
 #endif/*MAIN_H*/
