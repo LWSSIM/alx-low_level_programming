@@ -53,7 +53,7 @@ size_t free_listint_safe(listint_t **h)
 
 		if (*h == loop_id && loop)
 		{
-			if (loop_id == loop_id->next)
+			if (loop_id <= loop_id->next)
 			{
 				free(*h);
 				node_count++;
