@@ -2,34 +2,27 @@
 #include <stdlib.h>
 
 /**
- * find_listint_loop - find a loop within a SLL
+ * find_listint_loop_free - find a loop within a SLL
  * @head: ptr->head of SLL
  * Return: node where loop starts || NULL if linear
  */
-listint_t *find_listint_loop(listint_t *head)
+listint_t *find_listint_loop_free(listint_t *head)
 {
-	listint_t *sp, *fp;
+	listint_t *ps, *pe;
 
-	sp = head, fp = head;
 
 	if (head == NULL || head->next == NULL)
 		return (NULL);
 
-	while (fp && fp->next)
+	for (pe = head->next; !pe; pe = pe->next)
 	{
-		sp = sp->next;
-		fp = fp->next->next;
-
-		if (sp == fp)
+		if (pe == pe->next)
+			return (pe);
+		for (ps = head; ps != pe; ps = ps->next)
 		{
-			sp = head;
-			while (sp != fp)
-			{
-				sp = sp->next;
-				fp = fp->next;
-			}
-			return (sp);
-		}
+			if (ps == pe->next)
+				return (pe->next);
+		}		
 	}
 	return (NULL);
 }
