@@ -36,7 +36,7 @@ listint_t *find_listint_loop_free(listint_t *head)
 size_t free_listint_safe(listint_t **h)
 {
 	listint_t *node, *loop_id;
-	size_t node_count;
+	size_t node_count = 0;
 	int loop = 1;
 
 	if (!h || !(*h))
@@ -44,26 +44,31 @@ size_t free_listint_safe(listint_t **h)
 
 	loop_id = find_listint_loop_free(*h);
 
-	for (node_count = 0; (*h != loop_id || loop) && !(*h); *h = node)
+	while (*h && (*h != loop_id))
 	{
+		node = *h;
+		*h = (*h)->next;
+		free(node);
 		node_count++;
-		node = (*h)->next;
 
 		if (*h == loop_id && loop)
 		{
 			if (loop_id == loop_id->next)
 			{
 				free(*h);
-				break;
+				node_count++;
 			}
-
-			node_count++;
-			node = node->next;
-			free((*h)->next);
-			loop = 0;
+			else
+			{
+				node = (*h)->next;
+				free(*h);
+				node_count++;
+				*h = node;
+				loop = 0;
+			}
 		}
-		free(*h);
 	}
+
 	*h = NULL;
 	return (node_count);
 }
