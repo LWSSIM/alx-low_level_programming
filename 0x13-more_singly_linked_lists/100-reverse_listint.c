@@ -8,13 +8,13 @@
 listint_t *reverse_listint(listint_t **head)
 {
 	listint_t *p;
-	listint_t *np; 
+	listint_t *np;
 
 	p = NULL;
 	np = NULL;
 
 	if (!*head || !(*head)->next)
-			return (*head);
+		return (*head);
 
 	p = *head;
 	*head = NULL;
@@ -28,4 +28,4 @@ listint_t *reverse_listint(listint_t **head)
 	}
 
 	return (*head);
-}	
+}
