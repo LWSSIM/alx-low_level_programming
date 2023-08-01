@@ -22,9 +22,5 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 		node = node->next;
 		n++;
 	}
-
-	if (!node->next && index > n)
-		return (NULL);
-
 	return (node);
 }
