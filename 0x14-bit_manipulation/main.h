@@ -16,6 +16,9 @@ int set_bit(unsigned long int *n, unsigned int index);
 /*clear value at certain bit*/
 int clear_bit(unsigned long int *n, unsigned int index);
 
+/*calculate needed number to flip n to m*/
+unsigned int flip_bits(unsigned long int n, unsigned long int m);
+
 /*putchar*/
 int _putchar(char c);
 #endif /*MAIN_H*/
