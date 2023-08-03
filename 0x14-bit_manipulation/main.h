@@ -19,6 +19,9 @@ int clear_bit(unsigned long int *n, unsigned int index);
 /*calculate needed number to flip n to m*/
 unsigned int flip_bits(unsigned long int n, unsigned long int m);
 
+/*check endianness*/
+int get_endianness(void);
+
 /*putchar*/
 int _putchar(char c);
 #endif /*MAIN_H*/
