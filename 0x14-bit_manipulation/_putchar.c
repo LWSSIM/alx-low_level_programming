@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
- * _putchar - prints char 
+ * _putchar - prints char
  * @c: char
  * Return: 1
  */
