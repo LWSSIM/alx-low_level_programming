@@ -13,6 +13,9 @@ int get_bit(unsigned long int n, unsigned int index);
 /*set the value at a given index to 1*/
 int set_bit(unsigned long int *n, unsigned int index);
 
+/*clear value at certain bit*/
+int clear_bit(unsigned long int *n, unsigned int index);
+
 /*putchar*/
 int _putchar(char c);
 #endif /*MAIN_H*/
