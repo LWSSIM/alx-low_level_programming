@@ -18,7 +18,7 @@ unsigned int binary_to_uint(const char *b)
 		if (*b != '0' && *b != '1')
 			return (0);
 
-		x = x << 1; /*left shift to make room foe new bit*/
+		x = x << 1; /*left shift to make room for new bit*/
 
 		if (*b == '1')
 			x = x | 1;/*set least signfcnt bit to 1*/
