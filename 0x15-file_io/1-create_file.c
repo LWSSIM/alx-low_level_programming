@@ -2,7 +2,7 @@
 
 /**
  * create_file - creates a file with 600(rights)
- * @filename - name of the new file
+ * @filename: name of the new file
  * @text_content: string to write to new file
  *
  * Return: 1||-1
@@ -31,6 +31,6 @@ int create_file(const char *filename, char *text_content)
 	close(fildes);
 	if (WriteByte < 0)
 		return (-1);
-	
+
 	return (1);
 }
