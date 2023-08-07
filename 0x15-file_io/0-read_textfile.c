@@ -13,16 +13,16 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	char *bufr;
 	ssize_t read_byte, write_byte;
 
-	if (filename == NULL)
+	if (!filename)
 		return (0);
 
 	/*open file in O_RDONLY*/
 	file = fopen(filename, "r");
-	if  (file == NULL)
+	if  (!file)
 		return (0);
 
 	bufr = (char *)malloc(letters);
-	if (bufr == NULL)
+	if (!bufr)
 	{
 		fclose(file);
 		return (0);
