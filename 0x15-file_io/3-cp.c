@@ -37,7 +37,7 @@ int open_source_file(const char *from)
  */
 int open_destination_file(const char *to)
 {
-	int fildesT = open(to, O_WRONLY | O_CREAT | O_TRUNC, 0644);
+	int fildesT = open(to, O_WRONLY | O_CREAT | O_TRUNC, 0664);
 
 	if (fildesT == -1)
 	{
