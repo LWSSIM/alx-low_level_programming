@@ -26,7 +26,7 @@ void print_elf_header_info(Elf64_Ehdr *header, int fd)
 		if (read(fd, &OSAbi, sizeof(OSAbi)) != sizeof(OSAbi))
 		{
 				fprintf(stderr, "Error: Failed to read OS/ABI.\n");
-				exit()
+				exit(1);
 		}
 		switch (OSAbi)
 		{
@@ -44,7 +44,7 @@ void print_elf_header_info(Elf64_Ehdr *header, int fd)
 		{
 
 				fprintf(stderr, "Error: Failed to read Type.\n");
-				exit()
+				exit(1);
 		}
 		switch (type)
 		{
