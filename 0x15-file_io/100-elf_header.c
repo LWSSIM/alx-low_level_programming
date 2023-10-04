@@ -1,6 +1,51 @@
 #include "main.h"
 
 /**
+ * print_OSABI - print type of ELF file
+ * @header: pointer to ELF header array
+*/
+void print_OSABI(Elf64_Ehdr *header)
+{
+	printf("  OS/ABI:                            ");
+
+	switch (header->e_ident[EI_OSABI])
+	{
+	case ELFOSABI_NONE:
+		printf("UNIX - System V\n");
+		break;
+	case ELFOSABI_HPUX:
+		printf("UNIX - HP-UX\n");
+		break;
+	case ELFOSABI_NETBSD:
+		printf("UNIX - NetBSD\n");
+		break;
+	case ELFOSABI_LINUX:
+		printf("UNIX - Linux\n");
+		break;
+	case ELFOSABI_SOLARIS:
+		printf("UNIX - Solaris\n");
+		break;
+	case ELFOSABI_IRIX:
+		printf("UNIX - IRIX\n");
+		break;
+	case ELFOSABI_FREEBSD:
+		printf("UNIX - FreeBSD\n");
+		break;
+	case ELFOSABI_TRU64:
+		printf("UNIX - TRU64\n");
+		break;
+	case ELFOSABI_ARM:
+		printf("ARM\n");
+		break;
+	case ELFOSABI_STANDALONE:
+		printf("Standalone App\n");
+		break;
+	default:
+		printf("<unknown: %x>\n", header->e_ident[EI_OSABI]);
+	}
+}
+
+/**
  * print_Type - print type of ELF file
  * @header: pointer to ELF header array
 */
@@ -38,11 +83,9 @@ void print_Type(Elf64_Ehdr *header)
  * @header: file
  * @fd: file descriptor
 */
-void print_elf_header_info(Elf64_Ehdr *header, int fd)
+void print_elf_header_info(Elf64_Ehdr *header)
 {
 	int i;
-	uint8_t OSAbi;
-	char *OSAbi_str = "Unknown";
 	char *small = "2's complement, little endian";
 	char *big = "2's complement, big endian";
 
@@ -58,28 +101,12 @@ void print_elf_header_info(Elf64_Ehdr *header, int fd)
 	printf("%s\n", header->e_ident[EI_DATA] == ELFDATA2LSB ? small : big);
 	printf("  Version:                           ");
 	printf("%d (current)\n", header->e_ident[EI_VERSION]);
-	lseek(fd, EI_OSABI, SEEK_SET);
-	if (read(fd, &OSAbi, sizeof(OSAbi)) != sizeof(OSAbi))
-	{
-		fprintf(stderr, "Error: Failed to read OS/ABI.\n");
-		exit(1);
-	}
-	switch (OSAbi)
-	{
-		case ELFOSABI_SYSV:
-			OSAbi_str = "UNIX - System V";
-			break;
-		case ELFOSABI_HPUX:
-			OSAbi_str = "HP-UX";
-			break;
-	}
-	printf("  OS/ABI:                            ");
-	printf("%s\n", OSAbi_str);
+	print_OSABI(header);
 	printf("  ABI Version:                       ");
 	printf("%d\n", header->e_ident[EI_ABIVERSION]);
 	print_Type(header);
 	printf("  Entry point address:               ");
-	printf("0x%lx\n", (unsigned long)header->e_entry);
+	printf("%#x\n", (unsigned int)header->e_entry);
 }
 /**
  * main - elf header printer program
@@ -118,7 +145,7 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 	printf("ELF Header:\n");
-	print_elf_header_info(&header, fd);
+	print_elf_header_info(&header);
 	close(fd);
 	return (0);
 }
