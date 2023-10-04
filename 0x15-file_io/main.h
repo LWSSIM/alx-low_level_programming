@@ -24,6 +24,9 @@ int append_text_to_file(const char *filename, char *text_content);
 /*elf data printer*/
 void print_elf_header_info(Elf64_Ehdr *header, int fd);
 
+/*print type*/
+void print_Type(Elf64_Ehdr *header);
+
 /*elf executable fun*/
 int main(int argc, char *argv[]);
 #endif /*MAIN_H*/
