@@ -120,7 +120,6 @@ void print_elf_header_info(Elf64_Ehdr *header)
 		else
 			printf(" ");
 	}
-	printf("\n");
 	printf("  Class:                             ");
 	printf("%s\n", header->e_ident[EI_CLASS] == ELFCLASS32 ? "ELF32" : "ELF64");
 	printf("  Data:                              ");
