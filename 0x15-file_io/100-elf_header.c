@@ -79,6 +79,26 @@ void print_Type(Elf64_Ehdr *header)
 }
 
 /**
+ * print_Entry - prints the entry values of ELF header
+ * @header: pointer to elf header array
+*/
+void print_Entry(Elf64_Ehdr *header)
+{
+	printf("  Entry point address:               ");
+
+	if (header->e_ident[EI_DATA] == ELFDATA2MSB)
+	{
+		header->e_entry = ((header->e_entry << 8) & 0xFF00FF00) |
+				((header->e_entry >>8) & 0xFF00FF);
+		header->e_entry = (header->e_entry << 16) | 
+		(header->e_entry >> 16);
+	} 
+	if (header->e_ident[EI_CLASS] == ELFCLASS32)
+		printf("%#x\n", (unsigned int)header->e_entry);
+	else
+		printf("%#lx\n", header->e_entry);
+}
+/**
  * print_elf_header_info - printer
  * @header: file
  * @fd: file descriptor
@@ -105,8 +125,7 @@ void print_elf_header_info(Elf64_Ehdr *header)
 	printf("  ABI Version:                       ");
 	printf("%d\n", header->e_ident[EI_ABIVERSION]);
 	print_Type(header);
-	printf("  Entry point address:               ");
-	printf("%#x\n", (unsigned int)header->e_entry);
+	print_Entry(header);
 }
 /**
  * main - elf header printer program

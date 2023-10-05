@@ -9,6 +9,7 @@
 #include <string.h>
 #include <unistd.h>
 #include <elf.h>
+#include <sys/stat.h>
 
 #define ERROR_MSG "Error: Not a valid ELF file.\n"
 
@@ -29,6 +30,9 @@ void print_OSABI(Elf64_Ehdr *header);
 
 /*print type*/
 void print_Type(Elf64_Ehdr *header);
+
+/*print entry value of elf header*/
+void print_Entry(Elf64_Ehdr *header);
 
 /*elf executable fun*/
 int main(int argc, char *argv[]);
