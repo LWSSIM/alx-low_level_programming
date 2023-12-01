@@ -54,4 +54,7 @@ char *hash_table_get(const hash_table_t *ht, const char *key);
 /*print ordered dictionary of key:value pairs stored in the table*/
 void hash_table_print(const hash_table_t *ht);
 
+/*deletes hash_table*/
+void hash_table_delete(hash_table_t *ht);
+
 #endif /*hash_tables.h*/
