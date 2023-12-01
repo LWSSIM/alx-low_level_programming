@@ -14,5 +14,6 @@ int main(void)
 
 	ht = hash_table_create(1024);
 	printf("%p\n", (void *)ht);
+	printf("%s", ht->array[0]->key);
 	return (EXIT_SUCCESS);
 }
