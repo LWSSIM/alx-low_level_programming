@@ -2,6 +2,7 @@
 
 /**
  * hash_table_set - stores an element(key:value) in hash table
+ * Note: this function uses seperate chaining to avoid collisions
  * @ht: ptr->hash_table_t
  * @key: key to be hashed and stored
  * @value: value corresponding to the key to be stored
