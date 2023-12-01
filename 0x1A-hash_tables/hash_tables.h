@@ -42,4 +42,7 @@ hash_table_t *hash_table_create(unsigned long int size);
 /*Hashing function(dbj2)*/
 unsigned long int hash_djb2(const unsigned char *str);
 
+/*Get the index of key*/
+unsigned long int key_index(const unsigned char *key, unsigned long int size);
+
 #endif /*hash_tables.h*/
