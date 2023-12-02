@@ -30,7 +30,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		ht->array[index]->value = c_value;
 		return (1);
 	}
-	/*update value for existing key if found in linked list*/
+	/*update value for existing key on colision in linked list*/
 	for (head = ht->array[index]; head; head = head->next)
 	{
 		if (!strcmp(key, ht->array[index]->key))
