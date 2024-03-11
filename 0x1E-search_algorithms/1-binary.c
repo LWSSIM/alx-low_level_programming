@@ -8,6 +8,9 @@
  * @size: size of the array
  * @value: search (value)
  *
+ * Desc: The choice of the iterative appraoch is due to,
+ *	better space complexity O(1)
+ *
  * Return: Index of $value || -1 == not_found
  */
 int binary_search(int *array, size_t size, int value)
