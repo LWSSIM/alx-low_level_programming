@@ -1,6 +1,7 @@
 #include "search_algos.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 /**
  * main - Entry point
@@ -14,7 +15,10 @@ int main(void)
 
   printf("Found %d at index: %d\n\n", 3, interpolation_search(array, size, 3));
   printf("Found %d at index: %d\n\n", 7, interpolation_search(array, size, 7));
-  printf("Found %d at index: %d\n", 999,
+  printf("Found %d at index: %d\n\n", 999,
          interpolation_search(array, size, 999));
+
+  memset(array, 0, sizeof(array));
+  printf("Found %d at index: %d\n", 8, interpolation_search(array, size, 7));
   return (EXIT_SUCCESS);
 }
