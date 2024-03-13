@@ -1,6 +1,5 @@
 #include "search_algos.h"
 #include <math.h>
-#include <stdio.h>
 
 
 /**
@@ -30,6 +29,9 @@ int jump_search(int *array, size_t size, int value)
 {
 	int step = sqrt(size); /*block Jump size*/
 	int prev = 0;
+
+	if (!array)
+		return (-1);
 
   /*finds the block where value*/
 	while (array[min(step, size) - 1] < value)
