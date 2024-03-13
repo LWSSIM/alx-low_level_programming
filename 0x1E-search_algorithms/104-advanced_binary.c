@@ -1,21 +1,5 @@
 #include "search_algos.h"
 
-/**
- * advanced_binary - searches for a value in a sorted array of integers
- * using the Binary search algorith
- *
- * @array: array
- * @size: size
- * @value: value
- *
- * Return: index if found and -1 if not
- */
-int advanced_binary(int *array, size_t size, int value)
-{
-	if (!array)
-		return (-1);
-	return (advanced_binary_recursice(array, 0, size - 1, value));
-}
 
 /**
  * advanced_binary_recursice - recursive function
@@ -53,4 +37,21 @@ int advanced_binary_recursice(int *array, int low, int high, int value)
 			return (mid);
 	}
 	return (-1);
+}
+
+/**
+ * advanced_binary - searches for a value in a sorted array of integers
+ * using the Binary search algorith
+ *
+ * @array: array
+ * @size: size
+ * @value: value
+ *
+ * Return: index if found and -1 if not
+ */
+int advanced_binary(int *array, size_t size, int value)
+{
+	if (!array)
+		return (-1);
+	return (advanced_binary_recursice(array, 0, size - 1, value));
 }
